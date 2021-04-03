@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Quiz</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		#fnt {
+			color: green;
+			font-size: 200%;
+		}
+
+		#fnt1 {
+			color: red;
+			font-size: 200%;
+		}
+	</style>
+</head>
+<!---This content is open source use only for education purpose by anuj sahu blog-->
+<body>
+	<div class="container">
+		<form>
+			<label>DNS Standfor??</label><br>
+			<input type="radio" name="dns" value="Domain Name System">Domain Name System<br>
+			<input type="radio" name="dns" value="Domain Name Server">Domain Name Server<br>
+			<input type="radio" name="dns" value="Domain Nav Sys">Domain Nav Sys<br>
+			<input type="radio" name="dns" value="both a & b"> both a & b
+			<h3 id="result"></h3>
+		</form>
+		<hr>
+		<form>
+			<label>IP Stand for??</label>
+			<br>
+			<input type="radio" name="ip" value="Internet Protocol">Internet Protocol<br>
+			<input type="radio" name="ip" value="Internet Prototype">Internet Prototype<br>
+			<input type="radio" name="ip" value="Intranet Protocol">Intranet Protocol<br>
+			<input type="radio" name="ip" value="None of Above">None of Above	
+			<h3 id="result1"></h3>
+		</form>
+		<hr>
+
+		<form>
+			<label>DHCP Stand for??</label><br>
+			<input type="radio" name="dhcp" value="Domain Host Configure Protocol">Domain Host Configure Protocol<br>
+			<input type="radio" name="dhcp" value="Dynamic Host Configuration Protocol">Dynamic Host Configuration
+			Protocol<br>
+			<input type="radio" name="dhcp" value="Dynamic Host Configure Protocol">Dynamic Host Configure Protocol<br>
+			<input type="radio" name="dhcp" value="All Of Above">All Of Above
+			<h3 id="result2"></h3>
+		</form>
+
+		<button type="button" value="Submit" onclick="mainFn()">Submit</button>
+
+		<br> <br>
+		<button type="button" value="Print" onclick="window.print()">print</button>
+	</div>
+
+	<script>
+
+
+		function mainFn() {
+			let evt = document.querySelector('input:checked');
+			if (evt) {
+				function myFn() {
+					let res = "both a & b";
+					let evt = document.querySelector('input[name="dns"]:checked');
+					let newResult = evt.value
+					if (newResult == res) {
+
+						document.getElementById('result').innerHTML = '<i id=fnt class="fa fa-check" aria-hidden="true"></i>' + evt.value;
+					}
+					else {
+						document.getElementById('result').innerHTML = '<span id="fnt1">&times;</span> <br> Ans:-' + res;
+					}
+				}
+
+				function myFn1() {
+					let res = "Internet Protocol";
+					let evt = document.querySelector('input[name="ip"]:checked');
+					let newResult = evt.value
+					if (newResult == res) {
+
+						document.getElementById('result1').innerHTML = '<i id=fnt class="fa fa-check" aria-hidden="true"></i>' + evt.value;
+					}
+					else {
+						document.getElementById('result1').innerHTML = '<span id="fnt1">&times;</span> <br> Ans:-' + res;
+					}
+				}
+
+				function myFn2() {
+					let res = "Dynamic Host Configuration Protocol";
+					let evt = document.querySelector('input[name="dhcp"]:checked');
+					let newResult = evt.value
+					if (newResult == res) {
+
+						document.getElementById('result2').innerHTML = '<i id=fnt class="fa fa-check" aria-hidden="true"></i>' + evt.value;
+					}
+					else {
+						document.getElementById('result2').innerHTML = '<span id="fnt1">&times;</span> <br> Ans:-' + res;
+					}
+				}
+
+				myFn();
+				myFn1();
+				myFn2();
+			} else {
+				alert("Something went wrong!");
+			}
+		}
+
+	</script>
+
+</body>
+
+</html>
