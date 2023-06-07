@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @anuj326
-- 👀 I’m interested in web devlopment
-- 🌱 I’m currently learning javascript, php , bootstrap
+- 👀 I’m interested in web devlopment, backend dev
+- 🌱 I’ve leaner javascript, node js , react , bootstrap , MongoDB (MERN)
 - 💞️ I’m looking to collaborate on web projects
 - 📫 How to reach me anujsahu5227@gmail.com
 
